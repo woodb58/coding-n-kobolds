@@ -4,26 +4,51 @@ class Character extends Model {}
 
 Character.init(
   {
-    character_id: {
+    id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    name_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
-      notEmpty: true,
+      references: {
+        model: "name",
+        key: "id",
+      },
     },
-    gender: {
-      type: DataTypes.STRING,
+    gender_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      notEmpty: true,
+      references: {
+        model: "gender",
+        key: "id",
+      },
     },
-    backstory: {
-      type: DataTypes.STRING,
+    race_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      notEmpty: true,
+      references: {
+        model: "race",
+        key: "id",
+      },
+    },
+    class_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "class",
+        key: "id",
+      },
+    },
+    backstory_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "backstory",
+        key: "id",
+      },
     },
   },
   {
