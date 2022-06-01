@@ -5,7 +5,7 @@ const User = require("./User");
 // const Race = require("./Race");
 // const Gender = require("./Gender");
 const Class = require("./Class");
-// const Backstory = require("./Backstory");
+const Backstory = require("./Backstory");
 
 
 
@@ -17,7 +17,7 @@ module.exports = {
   // Name,
   // Gender,
   Class,
-  // Backstory,
+  Backstory,
 };
 
 
