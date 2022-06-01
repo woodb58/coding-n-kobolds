@@ -18,32 +18,31 @@ const seedAll = async () => {
     console.log('--------------');
 
     // await seedBackstory();
-
+    // console.log('--------------');
 
 
 
     // await seedCharacter();
-
+    // console.log('--------------');
 
 
 
     // await seedGender();
-
+    // console.log('--------------');
 
 
 
     // await seedName();
-
+    // console.log('--------------');
 
 
 
     // await seedRace();
-
-
-
+    // console.log('--------------');
 
 
     process.exit(0);
+
 };
 
 seedAll();
