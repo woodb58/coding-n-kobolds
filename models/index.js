@@ -1,37 +1,32 @@
+const Attributes = require("./Attributes");
 const User = require("./User");
-// const Character = require("./Character");
-
-// const Name = require("./Name");
-// const Race = require("./Race");
-// const Gender = require("./Gender");
+const Character = require("./Character");
+const Race = require("./Race");
+const Gender = require("./Gender");
 const Class = require("./Class");
 const Backstory = require("./Backstory");
 
 
+User.hasMany(Character, { foreignKey: "character_id", onDelete: "CASCADE" });
 
+Character.belongsTo(User, { foreignKey: "user_id", onDelete: "CASCADE" });
+Character.hasOne(User, { foreignKey: "user_id", onDelete: "CASCADE" });
 
+Race.belongsToMany(Character, { foreignKey: "race_id", through: Attributes });
+
+Gender.belongsToMany(Character, { foreignKey: "gender_id", through: Attributes });
+
+Class.belongsToMany(Character, { foreignKey: "class_id", through: Attributes });
+
+Backstory.belongsToMany(Character, { foreignKey: "backstory_id", through: Attributes });
 
 module.exports = {
+  Attributes,
   User,
-  // Character,
-  // Name,
-  // Gender,
+  Character,
+  Gender,
   Class,
   Backstory,
 };
 
 
-
-
-
-
-
-
-
-
-
-//we can begin adding seed files and uncommenting out above
-//Brian Back Story
-//Patrick User DONE?
-//Emily Gender
-//Cameron Class DONE
