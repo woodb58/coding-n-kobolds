@@ -1,5 +1,4 @@
-const sequelize = require('../config/connection');
-const { Class } = require('../models/Class');
+const { Class } = require('../models');
 
 const classData = [
     {
@@ -7,7 +6,7 @@ const classData = [
     }
 ]
 
-const seedClass = () => Class.bulkCreate(classData, { individualHooks: true });
+const seedClass = () => Class.bulkCreate(classData);
 
 
 module.exports = seedClass
