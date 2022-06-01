@@ -21,3 +21,10 @@ module.exports = {
   Class
 
 };
+
+
+//we can begin adding seed files and uncommenting out above
+//Brian Back Story
+//Patrick User
+//Emily Gender
+//Cameron Class DONE
