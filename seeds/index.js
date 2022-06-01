@@ -1,12 +1,13 @@
 const sequelize = require('../config/connection');
+const seedClass = require('./class-seeds');
 
-// const seedAll = async () => {
-//     await sequelize.sync({ force: true });
-  
-//     await seed"name"();
-  
-  
-//     process.exit(0);
-//   };
-  
-//   seedAll();
+const seedAll = async () => {
+    await sequelize.sync({ force: true });
+    console.log('--------------');
+    await seedClass();
+    console.log('--------------');
+
+    process.exit(0);
+};
+
+seedAll();

@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes, Model } = require("sequelize");
 
-class Class extends Model {}
+class Class extends Model { }
 
 Class.init(
   {
