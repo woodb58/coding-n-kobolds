@@ -7,6 +7,36 @@ const seedAll = async () => {
     await seedClass();
     console.log('--------------');
 
+
+
+
+
+    // await seedBACKSTORY();
+
+
+
+    // await seedUSER();
+
+
+
+    // await seedCHARACTER();
+
+
+
+    // await seedGENDER();
+
+
+
+    // await seedNAME();
+
+
+
+    // await seedRACE();
+
+
+
+
+
     process.exit(0);
 };
 
