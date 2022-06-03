@@ -1,0 +1,19 @@
+<nav>
+  <h1>{{User.username}}</h1>
+  <button id="addChar">add character</button>
+  <button id="logoutBtn">logout</button>
+</nav>
+
+<main>
+  {{#each Character}}
+  <div class="characterCard">
+    {{!-- image from {{attributes.race_id}}{{attributes.gender_id}} --}}
+    <img src="../public/assets/images/Elf-female-sketch.png" alt="Elf female">
+    {{!-- icon from {{attributes.class_id}} --}}
+    <img src="" alt="">
+    <h3>{{Character.name}}</h3>
+    <p>{{Backstory.backstory}}</p>
+  </div>
+  {{/each}}
+</main>
+
