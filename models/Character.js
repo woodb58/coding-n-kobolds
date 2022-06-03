@@ -15,6 +15,20 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    attributes_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'attributes',
+        key: 'id'
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,

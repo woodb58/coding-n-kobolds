@@ -10,7 +10,6 @@ const Backstory = require("./Backstory");
 User.hasMany(Character, { foreignKey: "character_id", onDelete: "CASCADE" });
 
 Character.belongsTo(User, { foreignKey: "user_id", onDelete: "CASCADE" });
-Character.hasOne(User, { foreignKey: "user_id", onDelete: "CASCADE" });
 
 Race.belongsToMany(Character, { foreignKey: "race_id", through: Attributes });
 

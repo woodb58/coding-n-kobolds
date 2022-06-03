@@ -4,6 +4,15 @@ const genderData = [
   {
     gender: "Female",
   },
+  {
+    gender: "Male",
+  },
+  {
+    gender: "Non-binary",
+  },
+  {
+    gender: "used-to-be-male",
+  },
 ];
 
 const seedGender = () =>
