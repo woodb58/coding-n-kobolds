@@ -1,3 +1,6 @@
+<h1>user page</h1>
+
+
 <nav>
   <h1>{{User.username}}</h1>
   <button id="addChar">add character</button>
@@ -17,3 +20,15 @@
   {{/each}}
 </main>
 
+
+{{!-- added script for the addChar button to redirect to create character page --}}
+
+<script>
+  console.log(location)
+  addChar.addEventListener("click", myFunction);
+
+  function myFunction() {
+    location.href = "http://localhost:3001/create-character";
+  }
+
+</script>
