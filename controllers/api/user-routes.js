@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-
 router.post('/', async (req, res) => {
   try {
     const newUser = await User.create({
@@ -18,6 +17,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({
@@ -44,6 +44,7 @@ router.post('/login', async (req, res) => {
     res.status(400).json({ message: 'No user account found!' });
   }
 });
+
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -53,4 +54,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 module.exports = router;
