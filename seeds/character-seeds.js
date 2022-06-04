@@ -4,6 +4,12 @@ const characterData = [
   {
     name: 'Frank',
   },
+  {
+    name: 'The',
+  },
+  {
+    name: 'Tank',
+  },
 ];
 
 const seedCharacter = () =>

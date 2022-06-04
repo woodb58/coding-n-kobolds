@@ -11,11 +11,19 @@ User.hasMany(Character, { foreignKey: "character_id", onDelete: "CASCADE" });
 
 Character.belongsTo(User, { foreignKey: "user_id", onDelete: "CASCADE" });
 
+Character.hasOne(Race, { foreignKey: "race_id", through: Attributes})
+
 Race.belongsToMany(Character, { foreignKey: "race_id", through: Attributes });
+
+Character.hasOne(Gender, { foreignKey: "gender_id", through: Attributes})
 
 Gender.belongsToMany(Character, { foreignKey: "gender_id", through: Attributes });
 
+Character.hasOne(Class, { foreignKey: "class_id", through: Attributes})
+
 Class.belongsToMany(Character, { foreignKey: "class_id", through: Attributes });
+
+Character.hasOne(Backstory, { foreignKey: "backstory_id", through: Attributes})
 
 Backstory.belongsToMany(Character, { foreignKey: "backstory_id", through: Attributes });
 
