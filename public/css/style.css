@@ -1,0 +1,55 @@
+:root {
+  --red: #9c2916;
+  --teal: #51a2a6;
+  --brown: #1b100a;
+  --yellow: #e9b44c;
+  --cream: #e4d6a7;
+}
+
+body {
+  background-color: var(--teal);
+  background-image: url(../assets/images/forest-bg.jpg);
+  color: var(--brown);
+  font-family: Arima Madurai;
+}
+
+main {
+  margin: 20px;
+  padding: 10%;
+  border-radius: 10%;
+  background-color: rgba(81, 162, 166, .6);
+  color: var(--cream)
+}
+
+#loginForm{
+  background-color: var(--cream);
+  background-image: url(../assets/images/parchment.jpg);
+  box-shadow: -3px 3px 4px#584B53;
+  border-radius: 10%;
+  margin: 20px;
+  padding: 20%;
+}
+
+.border-main {
+  border: solid 2px var(--brown);
+}
+
+.bg-main {
+  background-color: var(--teal);
+}
+
+.bg-alt {
+  background-color: var(--brown);
+}
+
+.text-main {
+  color: var(--brown);
+}
+
+.text-alt {
+  color: var(--teal);
+}
+
+.bg-accent {
+  background-color: var(--red);
+}

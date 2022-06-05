@@ -7,10 +7,13 @@
 </main>
 
 <form id="loginForm">
-  <h2>Login</h2>
-  <label for="username">username:</label>
-  <input type="text" name="username">
-  <label for="password">password:</label>
-  <input type="password" name="password">
-  <input type="submit" value="Login">
+  <div class="form-floating sm-space">
+    <input type="text" name="username" class="form-control" placeholder="Doom_Bringer">
+    <label for="username">username:</label>
+  </div>
+  <div class="form-floating sm-space">
+    <input type="password" name="password" class="form-control" placeholder="****">
+    <label for="password">password:</label>
+  </div>
+  <input type="submit" value="Login" class="bg-main sm-space">
 </form>
