@@ -1,16 +1,15 @@
 const User = require("./User");
-const Character = require("./Character");
+const Toon = require("./Toon");
 
 
 
-User.hasMany(Character, { foreignKey: "user_id", onDelete: "CASCADE" });
+User.hasMany(Toon, { foreignKey: "user_id", onDelete: "CASCADE" });
 
-Character.belongsTo(User, { foreignKey: "user_id", onDelete: "CASCADE" });
+Toon.belongsTo(User, { foreignKey: "user_id", onDelete: "CASCADE" });
 
 module.exports = {
   User,
-  Character,
-  
+  Toon
 };
 
 

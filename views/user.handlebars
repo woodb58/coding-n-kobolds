@@ -3,25 +3,25 @@
 
 <nav>
   <h1>{{User.username}}</h1>
-  <button id="addChar">add character</button>
+  <button id="addChar">add toon</button>
   <button id="logoutBtn">logout</button>
 </nav>
 
 <main>
-  {{#each Character}}
-  <div class="characterCard">
+  {{#each Toon}}
+  <div class="toonCard">
     {{!-- image from {{attributes.race_id}}{{attributes.gender_id}} --}}
     <img src="../public/assets/images/Elf-female-sketch.png" alt="Elf female">
     {{!-- icon from {{attributes.class_id}} --}}
     <img src="" alt="">
-    <h3>{{Character.name}}</h3>
+    <h3>{{Toon.name}}</h3>
     <p>{{Backstory.backstory}}</p>
   </div>
   {{/each}}
 </main>
 
 
-{{!-- added script for the addChar button to redirect to create character page --}}
+{{!-- added script for the addChar button to redirect to create toon page --}}
 
 <script>
   console.log("here are users  " + User.username);
@@ -29,7 +29,7 @@
   addChar.addEventListener("click", myFunction);
 
   function myFunction() {
-    location.href = "http://localhost:3001/create-character";
+    location.href = "http://localhost:3001/create-toon";
   }
 
 </script>

@@ -1,5 +1,6 @@
 const sequelize = require("../config/connection");
-const seedCharacter = require("./character-seeds");
+
+const seedToon = require("./toon-seeds");
 const seedUsers = require("./user-seeds");
 
 const seedAll = async () => {
@@ -9,7 +10,7 @@ const seedAll = async () => {
   await seedUsers();
   console.log("--------------");
 
-  await seedCharacter();
+  await seedToon();
   console.log("--------------");
 
   process.exit(0);
