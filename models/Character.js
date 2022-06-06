@@ -11,24 +11,38 @@ Character.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    attributes_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'attributes',
-        key: 'id'
-      }
+
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      
+    },
+
+    race: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      
+    },
+
+    class: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     
+    },
+
+    backstory: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     
     },
     user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
-    }
+      type: DataTypes.INTEGER,  
+  }
   },
   {
     sequelize,
