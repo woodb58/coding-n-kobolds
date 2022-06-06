@@ -4,6 +4,12 @@ const classData = [
   {
     class: "Fighter",
   },
+  {
+    class: "Also a Fighter",
+  },
+  {
+    class: "Also a Fighter but just stands in back and looks cool",
+  },
 ];
 
 const seedClass = () => Class.bulkCreate(classData, { individualHooks: true });

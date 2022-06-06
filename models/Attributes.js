@@ -43,6 +43,7 @@ Attributes.init(
         key: "id",
       },
     },
+
   },
   {
     sequelize,
