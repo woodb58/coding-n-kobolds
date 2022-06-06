@@ -7,21 +7,24 @@ const toonData = [
     gender: 'male',
     race: 'elf',
     class: 'fighter',
-    backstory: 'im an elf'
+    backstory: 'im an elf',
+    user_id: 1
   },
   {
     name: 'The',
     gender: 'male',
     race: 'elf',
     class: 'fighter',
-    backstory: 'im an elf'
+    backstory: 'im an elf',
+    user_id: 2
   },
   {
     name: 'Tank',
     gender: 'male',
     race: 'elf',
     class: 'fighter',
-    backstory: 'im an elf'
+    backstory: 'im an elf',
+    user_id: 2
   },
 ];
 
