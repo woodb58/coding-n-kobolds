@@ -14,4 +14,8 @@ router.get('/create-character', (req, res) => {
     res.render('create-character')
 });
 
+router.get('/signup', (req, res) => {
+    res.render('signup')
+});
+
 module.exports = router;
