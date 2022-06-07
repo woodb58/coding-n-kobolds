@@ -38,7 +38,7 @@ main {
   padding: 10%;
   background-image: 
     linear-gradient(to bottom, 
-    rgba(81, 162, 166, 1), 
+    /* rgba(81, 162, 166, 1),  */
     rgba(81, 162, 166, 0));
   color: var(--cream)
 }
