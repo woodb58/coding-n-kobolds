@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Toon } = require('../../models');
 
-router.get('/', req, res => {
+router.get('/', (req, res) => {
   User.findAll()
   .then(dbUserData => res.json(dbUserData))
   .catch(err => {
