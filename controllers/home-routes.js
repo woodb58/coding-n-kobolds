@@ -10,8 +10,8 @@ router.get('/user', (req, res) => {
     res.render('user')
 });
 
-router.get('/create-toon', (req, res) => {
-    res.render('create-toon')
+router.get('/toon', (req, res) => {
+    res.render('toon')
 });
 
 router.get('/signup', (req, res) => {
