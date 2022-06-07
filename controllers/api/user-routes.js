@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character } = require('../../models');
+const { User, Toon } = require('../../models');
 
 router.get('/', req, res => {
   User.findAll()
@@ -17,7 +17,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     include: [
-      {model: Character}
+      {model: Toon}
     ]
   })
   .then(dbUserData => {
