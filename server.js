@@ -31,7 +31,7 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // we can figure out which static path we want to use, I assume public since a majority of our content will be there
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(routes);
 

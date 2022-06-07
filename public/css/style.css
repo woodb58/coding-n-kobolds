@@ -13,6 +13,10 @@
 body {
   background-color: var(--teal);
   background-image: url(../assets/images/forest-bg.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
   color: var(--brown);
   font-family: Arima Madurai;
 }
