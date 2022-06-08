@@ -15,12 +15,6 @@ router.get('/user', (req, res) => {
     res.render('user')
 });
 
-// , dbToonData[0].get({ plain: true })
-
-router.get('/toon', (req, res) => {
-    res.render('toon')
-});
-
 router.get('/create-toon', (req, res) => {
     res.render('create-toon')
 });

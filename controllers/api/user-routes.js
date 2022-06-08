@@ -3,13 +3,12 @@ const { User, Toon } = require('../../models');
 
 router.get('/', (req, res) => {
   User.findAll()
-  .then(dbUserData => res.json(dbUserData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 })
-
 
 router.get('/:id', (req, res) => {
   User.findOne({
@@ -17,20 +16,20 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     include: [
-      {model: Toon}
+      { model: Toon }
     ]
   })
-  .then(dbUserData => {
-    if (!dbUserData) {
-      res.status(404).json({ message: 'ideth unfoundith'});
-      return;
-    }
-    res.json(dbUserData);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err)
-  });
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'ideth unfoundith' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err)
+    });
 });
 
 router.post('/', async (req, res) => {
@@ -60,7 +59,7 @@ router.post('/', (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-  
+
         res.json(dbUserData);
       });
     })
@@ -92,13 +91,11 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-  
+
       res.json({ user: dbUserData, message: 'your in has been logged!' });
     });
   });
 });
-
-
 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
@@ -118,16 +115,16 @@ router.put('/:id', (req, res) => {
     }
   })
     .then(dbUserData => {
-      if(!dbUserData) {
-        res.status(404).json({ message: 'no user in the realm found with this id'});
+      if (!dbUserData) {
+        res.status(404).json({ message: 'no user in the realm found with this id' });
         return;
       }
       res.json(dbUserData);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.delete('/:id', (req, res) => {
@@ -138,7 +135,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({message: 'thou id hath not been found'});
+        res.status(404).json({ message: 'thou id hath not been found' });
         return;
       }
       res.json(dbUserData);

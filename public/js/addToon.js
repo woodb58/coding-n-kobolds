@@ -4,10 +4,11 @@ async function newFormHandler(event) {
 
 
     const toonName = document.querySelector('input[name="toonName"]').value;
-    const race = document.querySelector('select[name="race"]').option.value;
-    const gender = document.querySelector('select[name="gender"]').option.value;
-    const toonClass = document.querySelector('select[name="toonClass"]').option.value;
-    const backstory = document.querySelector('textarea[name="backstory"]').innerHTML;
+    const race = document.querySelector('select[name="race"]').value;
+    const gender = document.querySelector('select[name="gender"]').value;
+    const toonClass = document.querySelector('select[name="toonClass"]').value;
+    const backstoryValue = document.querySelector('textarea[name="backstory"]');
+    const backstory = backstoryValue.value;
 
     const response = await fetch(`/api/toon`, {
         method: 'POST',
@@ -24,11 +25,6 @@ async function newFormHandler(event) {
     });
 
     if (response.ok) {
-        console.log("============================================================================" + toonName);
-        console.log(race);
-        console.log(gender);
-        console.log(toonClass);
-        console.log(backstory);
         document.location.replace('/user');
     } else {
         alert(response.statusText);
