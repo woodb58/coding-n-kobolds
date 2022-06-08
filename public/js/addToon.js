@@ -7,8 +7,7 @@ async function newFormHandler(event) {
     const race = document.querySelector('select[name="race"]').value;
     const gender = document.querySelector('select[name="gender"]').value;
     const toonClass = document.querySelector('select[name="toonClass"]').value;
-    const backstoryValue = document.querySelector('textarea[name="backstory"]');
-    const backstory = backstoryValue.value;
+    const backstory = document.querySelector('textarea[name="backstory"]').value;
 
     const response = await fetch(`/api/toon`, {
         method: 'POST',
