@@ -3,7 +3,7 @@
 
 <nav>
   <h1>{{User.username}}</h1>
-  <button id="addChar">add toon</button>
+  <button id="addToon">Add Toon</button>
   <button id="logoutBtn">logout</button>
 </nav>
 
@@ -21,15 +21,35 @@
 </main>
 
 
-{{!-- added script for the addChar button to redirect to create toon page --}}
+
 
 <script>
-  console.log("here are users  " + User.username);
 
-  addChar.addEventListener("click", myFunction);
+  addToon.addEventListener("click", createToonPage);
+  logoutBtn.addEventListener("click", logout);
 
-  function myFunction() {
-    location.href = "http://localhost:3001/create-toon";
+  function createToonPage() {
+    document.location.replace('/create-toon');
+  }
+
+  async function logout() {
+
+    const response = await fetch('/api/users/logout', {
+
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' }
+
+    });
+
+    if (response.ok) {
+
+      document.location.replace('/');
+
+    } else {
+
+      alert(response.statusText);
+
+    }
   }
 
 </script>
