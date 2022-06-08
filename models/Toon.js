@@ -11,7 +11,7 @@ Toon.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    toonName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -23,7 +23,7 @@ Toon.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    class: {
+    toonClass: {
       type: DataTypes.STRING,
       allowNull: false,
     },

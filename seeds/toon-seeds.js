@@ -3,26 +3,26 @@ const { Toon } = require('../models');
 
 const toonData = [
   {
-    name: 'Frank',
+    toonName: 'Frank',
     gender: 'male',
     race: 'elf',
-    class: 'fighter',
+    toonClass: 'fighter',
     backstory: 'im an elf',
     user_id: 1
   },
   {
-    name: 'The',
+    toonName: 'The',
     gender: 'male',
     race: 'elf',
-    class: 'fighter',
+    toonClass: 'fighter',
     backstory: 'im an elf',
     user_id: 2
   },
   {
-    name: 'Tank',
+    toonName: 'Tank',
     gender: 'male',
     race: 'elf',
-    class: 'fighter',
+    toonClass: 'fighter',
     backstory: 'im an elf',
     user_id: 2
   },
