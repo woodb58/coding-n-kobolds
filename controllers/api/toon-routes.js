@@ -30,14 +30,14 @@ router.get("/:id", (req, res) => {
       }
     ]
   })
-    .then((dbToonData) => {
+    .then(dbToonData => {
       if (!dbToonData) {
         res.status(404).json({ message: "No character found with this id" });
         return;
       }
       res.json(dbToonData);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
