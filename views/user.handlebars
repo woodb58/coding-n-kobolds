@@ -10,10 +10,9 @@
 <main>
   {{#each Toon}}
   <div class="toonCard">
-    {{!-- image from {{attributes.race_id}}{{attributes.gender_id}} --}}
+    {{#if Toon.race == Elf && Toon.gender == Female}}
     <img src="../public/assets/images/Elf-female-sketch.png" alt="Elf female">
-    {{!-- icon from {{attributes.class_id}} --}}
-    <img src="" alt="">
+    {{/if}}
     <h3>{{Toon.name}}</h3>
     <p>{{Toon.backstory}}</p>
   </div>
