@@ -43,70 +43,74 @@ router.get("/:id", (req, res) => {
     });
 });
 
+
+//this needs work because class cannot be used as a variable
+//title so see create-toons.handlebars and addToon.js to make
+//neccessary updates
 router.post('/', withAuth, (req, res) => {
-    Toon.create({
-        name: req.body.name,
-        gender: req.body.gender,
-        race: req.body.race,
-        class: req.body.class,
-        backstory: req.body.backstory,
-        user_id: req.session.user_id
-    })
+  Toon.create({
+    name: req.body.toonName,
+    race: req.body.race,
+    gender: req.body.gender,
+    class: req.body.toonClass,
+    backstory: req.body.backstory,
+    user_id: req.session.user_id
+  })
     .then(dbToonData => res.json(dbToonData))
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
 router.put('/:id', withAuth, (req, res) => {
-    Toon.update({
-        name: req.body.name,
-        gender: req.body.gender,
-        race: req.body.race,
-        class: req.body.class,
-        backstory: req.body.backstory,
-        user_id: req.session.user_id
-    },
+  Toon.update({
+    name: req.body.name,
+    gender: req.body.gender,
+    race: req.body.race,
+    class: req.body.class,
+    backstory: req.body.backstory,
+    user_id: req.session.user_id
+  },
     {
-        where: {
-            id: req.params.id
-        }
-    }
-    )
-    .then(dbToonData => {
-        if (!dbToonData) {
-          res.status(404).json({ message: 'No character found with this id' });
-          return;
-        }
-        res.json(dbToonData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-});
-
-router.delete('/:id', withAuth, (req, res) => {
-    console.log('id', req.params.id);
-    Toon.destroy({
       where: {
         id: req.params.id
       }
+    }
+  )
+    .then(dbToonData => {
+      if (!dbToonData) {
+        res.status(404).json({ message: 'No character found with this id' });
+        return;
+      }
+      res.json(dbToonData);
     })
-      .then(dbToonData => {
-        if (!dbToonData) {
-          res.status(404).json({ message: 'No character found with this id' });
-          return;
-        }
-        res.json(dbToonData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-  module.exports = router;
+router.delete('/:id', withAuth, (req, res) => {
+  console.log('id', req.params.id);
+  Toon.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbToonData => {
+      if (!dbToonData) {
+        res.status(404).json({ message: 'No character found with this id' });
+        return;
+      }
+      res.json(dbToonData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+module.exports = router;
 
 
