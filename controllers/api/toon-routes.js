@@ -62,10 +62,10 @@ router.post('/', (req, res) => {
 
 router.put('/:id', withAuth, (req, res) => {
   Toon.update({
-    name: req.body.name,
-    gender: req.body.gender,
+    toonName: req.body.toonName,
     race: req.body.race,
-    class: req.body.class,
+    gender: req.body.gender,
+    toonClass: req.body.toonClass,
     backstory: req.body.backstory,
     user_id: req.session.user_id
   },

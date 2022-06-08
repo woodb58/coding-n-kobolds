@@ -1,8 +1,6 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-
-
     const toonName = document.querySelector('input[name="toonName"]').value;
     const race = document.querySelector('select[name="race"]').value;
     const gender = document.querySelector('select[name="gender"]').value;
