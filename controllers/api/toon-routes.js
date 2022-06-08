@@ -47,16 +47,20 @@ router.get("/:id", (req, res) => {
 //this needs work because class cannot be used as a variable
 //title so see create-toons.handlebars and addToon.js to make
 //neccessary updates
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
+
+  // const body = req.body
   Toon.create({
-    name: req.body.toonName,
+    // ...body,
+    toonName: req.body.toonName,
     race: req.body.race,
     gender: req.body.gender,
-    class: req.body.toonClass,
+    toonClass: req.body.toonClass,
     backstory: req.body.backstory,
     user_id: req.session.user_id
   })
     .then(dbToonData => res.json(dbToonData))
+    // .then(console.log(dbToonData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
