@@ -1,6 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
+// passport configure
+const express = require("express");
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
 
 // create our User model
 class User extends Model {
@@ -29,8 +33,8 @@ User.init(
       validate: {
         len: [4],
       },
-    }
-  }, 
+    },
+  },
   {
     hooks: {
       // set up beforeCreate lifecycle "hook" functionality
