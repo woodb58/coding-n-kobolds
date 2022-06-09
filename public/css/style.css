@@ -15,7 +15,7 @@ body {
   background-image: url(../assets/images/forest-bg.jpg);
   min-height: 100vh;
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   color: var(--brown);
   font-family: Arima Madurai;
@@ -30,11 +30,15 @@ a:hover {
   color: var(--teal);
 }
 
+#newToonForm {
+  text-align: center;
+}
+
 .sm-space {
   margin: 10px;
 }
 
-main {
+/* main {
   padding: 10%;
   background-image: linear-gradient(
     to bottom,
