@@ -1,19 +1,23 @@
-<h1>user page</h1>
-
-
-<nav>
-  <h1>{{User.username}}</h1>
-  <button id="addToon" onclick="document.location.replace('/create-toon')">Add Toon</button>
+<button id="addToon" onclick="document.location.replace('/create-toon')">Add Toon</button>
   <button id="logoutBtn">logout</button>
 </nav>
 
-<main>
-  {{#each Toon}}
-  <div class="toonCard">
-    <img src="/assets/images/{{getToonImage Toon.race Toon.gender}}" alt="{{Toon.race}} {{Toon.gender}}">
 
-    <h3>{{Toon.name}}</h3>
-    <p>{{Toon.backstory}}</p>
+
+
+<main>
+
+  {{#each toon}}
+<h1>{{user.username}}</h1>
+
+  <div class="toonCard">
+    <img src="/assets/images/{{race}}-{{gender}}-sketch.png" alt="{{race}} {{gender}}">
+
+    <h3>{{toonName}}</h3>
+    <p>{{gender}}</p>
+    <p>{{race}}</p>
+    <p>{{toonclass}}</p>
+    <p>{{backstory}}</p>
   </div>
   {{/each}}
 </main>
