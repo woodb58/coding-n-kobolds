@@ -15,7 +15,7 @@ body {
   background-image: url(../assets/images/forest-bg.jpg);
   min-height: 100vh;
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   color: var(--brown);
   font-family: Arima Madurai;
@@ -30,20 +30,24 @@ a:hover {
   color: var(--teal);
 }
 
+#newToonForm {
+  text-align: center;
+}
+
 .sm-space {
   margin: 10px;
 }
 
-main {
+/* main {
   padding: 10%;
   background-image: 
     linear-gradient(to bottom, 
     /* rgba(81, 162, 166, 1),  */
-    rgba(81, 162, 166, 0));
+    /* rgba(81, 162, 166, 0));
   color: var(--cream)
-}
+} */
 
-#loginForm, #createAccountForm {
+#loginForm, #createAccountForm, #newToonForm {
   background-color: var(--cream);
   background-image: url(../assets/images/parchment.jpg);
   box-shadow: -3px 3px 4px#584B53;
