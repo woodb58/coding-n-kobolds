@@ -32,7 +32,14 @@ router.get("/dynamic", (req, res) => {
 router.get("/user", (req, res) => {
   console.log("======================");
   Toon.findAll({
-    attributes: ["id", "toonName", "gender", "race", "toonClass", "backstory"],
+    attributes: [
+    "id", 
+    "toonName", 
+    "gender", 
+    "race", 
+    "toonClass", 
+    "backstory"
+  ],
     include: [
       {
         model: User,
@@ -49,14 +56,6 @@ router.get("/user", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.get("/create-toon", (req, res) => {
-  res.render("create-toon");
-});
-
-router.get("/signup", (req, res) => {
-  res.render("signup");
 });
 
 router.get("/create-toon", (req, res) => {
