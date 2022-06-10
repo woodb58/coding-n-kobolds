@@ -36,6 +36,6 @@ app.use(express.static("assets/images"));
 
 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`listening`));
 });
