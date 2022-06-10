@@ -10,6 +10,7 @@ const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: "project 2 super secret cookie secret",
@@ -21,19 +22,19 @@ const sess = {
   }),
 };
 
+
+
 app.use(session(sess));
-
-const hbs = exphbs.create({ helpers });
-
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-
+app.set("views", "./views");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// we can figure out which static path we want to use, I assume public since a majority of our content will be there
 app.use(express.static(path.join(__dirname, "/public")));
-
 app.use(routes);
+app.use(express.static("assets/images"));
+
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`listening`));
