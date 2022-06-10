@@ -2,24 +2,27 @@
 
 
 <nav>
-  <h1>{{User.username}}</h1>
+
+  <h1>the name{{#with User}}{{username}}{{/with}}</h1>
+
   <button id="addToon" onclick="document.location.replace('/create-toon')">Add Toon</button>
   <button id="logoutBtn">logout</button>
 </nav>
 
 <main>
-  {{#each Toon}}
+  {{!-- {{#if toon.length}} --}}
+  {{!-- {{#each Toon |Toon|}} --}}
   <div class="toonCard">
-    <img src="/assets/images/{{getToonImage Toon.race Toon.gender}}" alt="{{Toon.race}} {{Toon.gender}}">
-
-    <h3>{{Toon.name}}</h3>
-    <p>{{Toon.backstory}}</p>
+    {{!-- <img src="/assets/images/{{getToonImage Toon.race Toon.gender}}" alt="{{Toon.race}} {{Toon.gender}}"> --}}
+    hello there
+    {{!-- {{!-- <h3>{{Toon.name}}</h3> --}}
+    {{!-- <p>{{Toon.backstory}}</p> --}}
   </div>
-  {{/each}}
+  {{!-- {{/each}} --}}
+  {{!-- {{/if}} --}}
 </main>
 
 
 
 
-<script src="/js/logout.js">
-</script>
+<script src="/js/logout.js"></script>
