@@ -31,15 +31,17 @@ router.get("/dynamic", (req, res) => {
 
 router.get("/user", (req, res) => {
   console.log("======================");
+  console.log(req.session.user)
+
   Toon.findAll({
     attributes: [
-    "id", 
-    "toonName", 
-    "gender", 
-    "race", 
-    "toonClass", 
-    "backstory"
-  ],
+      "id",
+      "toonName",
+      "gender",
+      "race",
+      "toonClass",
+      "backstory"
+    ],
     include: [
       {
         model: User,
@@ -47,15 +49,16 @@ router.get("/user", (req, res) => {
       },
     ],
   })
-    .then((dbToonData) => {
-      console.log(dbToonData[0]);
-      const toon = dbToonData.map((toon) => toon.get({ plain: true }));
-      res.render("user", { toon });
+    .then((dbUserData) => {
+      console.log(dbUserData[0]);
+      const toon = dbUserData.map((dbUserData) => dbUserData.get({ plain: true }));
+      res.render("user", { toon, user: req.session.user });
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
+
 });
 
 router.get("/create-toon", (req, res) => {

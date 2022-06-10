@@ -3,11 +3,11 @@ const { User, Toon } = require('../../models');
 
 router.get('/', (req, res) => {
   User.findAll({
-    attributes: {exclude: ['password']},
+    attributes: { exclude: ['password'] },
     include: [
-        {
-            model: Toon
-        }
+      {
+        model: Toon
+      }
     ]
   })
     .then(dbUserData => res.json(dbUserData))
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
   User.findOne({
     attributes: {
       exclude: ['password']
-  },
+    },
     where: {
       id: req.params.id
     },
@@ -81,6 +81,7 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
+      req.session.user = dbUserData.get({ plain: true });
 
       res.json({ user: dbUserData, message: 'your in has been logged!' });
     });

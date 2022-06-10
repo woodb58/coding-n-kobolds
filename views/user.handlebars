@@ -1,15 +1,15 @@
 <nav>
-<button id="addToon" onclick="document.location.replace('/create-toon')">Add Toon</button>
-<button id="logoutBtn">logout</button>
+  <button id="addToon" onclick="document.location.replace('/create-toon')">Add Toon</button>
+  <button id="logoutBtn">logout</button>
 </nav>
 
-
+<h1>{{this.user.username}}</h1>
 
 
 <main>
 
   {{#each toon}}
-  <h1>{{user.username}}</h1>
+  {{!-- <h1>{{user.username}}</h1> --}}
 
   <div class="toonCard">
     <img src="/assets/images/{{race}}-{{gender}}-sketch.png" alt="{{race}} {{gender}}">
@@ -20,8 +20,7 @@
     <p>{{toonclass}}</p>
     <p>{{backstory}}</p>
   </div>
-  {{!-- {{/each}} --}}
-  {{!-- {{/if}} --}}
+  {{/each}}
 </main>
 
 
