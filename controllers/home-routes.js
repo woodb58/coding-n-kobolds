@@ -15,20 +15,6 @@ router.get("/static", (req, res) => {
   res.render("static");
 });
 
-router.get("/dynamic", (req, res) => {
-  imageList = [];
-  imageList.push({ src: "Dwarf-female.png", name: "Dwarf-Female" });
-  imageList.push({ src: "Dwarf-male.png", name: "Dwarf-Male" });
-  imageList.push({ src: "Elf-female.png", name: "Elf-Female" });
-  imageList.push({ src: "Elf-male.png", name: "Elf-Male" });
-  imageList.push({ src: "Human-female.png", name: "Human-Female" });
-  imageList.push({ src: "Human-male.png", name: "Human-Male" });
-  imageList.push({ src: "Orc-female.png", name: "Orc-Female" });
-  imageList.push({ src: "Orc-male.png", name: "Orc-Male" });
-
-  res.render("dynamic", { imageList: imageList });
-});
-
 router.get("/user", (req, res) => {
   console.log("======================");
   console.log(req.session.user)
