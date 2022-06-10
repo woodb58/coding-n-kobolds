@@ -70,6 +70,13 @@ main {
   color: var(--teal);
 }
 
+.toonCard img {
+  display: flex;
+}
+.toonCard p,
+h3 {
+}
+
 @media all and (min-width: 500px) {
   #loginForm {
     margin: 20px 10%;
