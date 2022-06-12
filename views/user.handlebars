@@ -4,10 +4,13 @@
   <button id="logoutBtn">logout</button>
 </nav>
 
+<h1>{{this.user.username}}</h1>
+
+
 <main>
 
   {{#each toon}}
-    <h1>{{user.username}}</h1>
+  {{!-- <h1>{{user.username}}</h1> --}}
 
     <div class="toonCard">
       <img
@@ -24,5 +27,7 @@
   {{/each}}
 </main>
 
-<script src="/js/logout.js">
-</script>
+
+
+
+<script src="/js/logout.js"></script>
