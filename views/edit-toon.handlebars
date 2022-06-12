@@ -1,10 +1,10 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
-    <h1>{{User.username}}</h1>
+    <h1>{{this.user.username}}</h1>
     <button id="backBtn" onclick="document.location.replace('/user')">Back</button>
 </nav>
 
 <main>
-    <form data-id="{{toon.id}}" class="edit-toon-form">
+    <form data-id="{{toon.id}}" class="edit-toon-form form">
         <h2 class="sm-space">Edit Character</h2>
         <div class="form-floating sm-space">
             <input type="text" name="toonName" placeholder="Shia LaBeouf" class="form-control"
@@ -21,7 +21,6 @@
         </select>
 
         <label for="gender" class="form-label visually-hidden">Gender:</label>
-
         <select name="gender" id="charGender" class="form-control dropdown sm-space" value="{{toon.gender}}">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
