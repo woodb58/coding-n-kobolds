@@ -1,11 +1,9 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
+  <h1>{{this.user.username}}</h1>
   <button id="addToon" onclick="document.location.replace('/create-toon')">Add
     Toon</button>
   <button id="logoutBtn">logout</button>
 </nav>
-
-<h1>{{this.user.username}}</h1>
-
 
 <main>
 
@@ -13,7 +11,7 @@
 
     <div class="toonCard">
       <img
-        src="/assets/images/{{race}}-{{gender}}-sketch.png"
+        src="/assets/images/{{race}}-{{gender}}.png"
         alt="{{race}} {{gender}} width="450" height="390""
       />
 

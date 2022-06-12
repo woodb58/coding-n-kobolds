@@ -1,12 +1,12 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
-  <h1>{{User.username}}</h1>
+  <h1>{{this.user.username}}</h1>
   <button id="backBtn" onclick="document.location.replace('/user')">Back</button>
 </nav>
 
 <main>
 
 
-  <form id="newToonForm" class="new-toon-form">
+  <form id="newToonForm" class="new-toon-form form">
     <h2 class="sm-space">Create New Character</h2>
     <div class="form-floating sm-space">
       <input type="text" name="toonName" placeholder="Shia LaBeouf" class="form-control" />
