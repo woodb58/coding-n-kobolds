@@ -15,11 +15,14 @@ router.get("/static", (req, res) => {
   res.render("static");
 });
 
-router.get("/user", (req, res) => {
+router.get("/user", withAuth, (req, res) => {
   console.log("======================");
   console.log(req.session.user)
 
   Toon.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
     attributes: [
       "id",
       "toonName",
