@@ -23,11 +23,11 @@ async function editFormHandler(event) {
         }
     });
     console.log(response)
-    // if (response.ok) {
-    //     document.location.replace('/user');
-    // } else {
-    //     alert(response.statusText);
-    // }
+    if (response.ok) {
+        document.location.replace('/user');
+    } else {
+        alert(response.statusText);
+    }
 }
 
 document.querySelector('.edit-toon-form').addEventListener('submit', editFormHandler);

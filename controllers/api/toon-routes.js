@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Toon, User } = require("../../models");
+
 const withAuth = require("../../utils/auth");
 
 router.get("/", (req, res) => {
@@ -88,11 +89,10 @@ router.put('/', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
-  console.log('id', req.params.id);
+router.delete('/', withAuth, (req, res) => {
   Toon.destroy({
     where: {
-      id: req.params.id
+      id: req.session.user_id
     }
   })
     .then(dbToonData => {

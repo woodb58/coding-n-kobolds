@@ -60,7 +60,6 @@ router.get("/edit-toon", (req, res) => {
       id: req.session.user_id,
     }
   }).then((dbToonData) => {
-    console.log(dbToonData)
     res.render("edit-toon", { toon: dbToonData.get({ plain: true }) });
   })
 
