@@ -17,7 +17,6 @@ router.get("/static", (req, res) => {
 
 router.get("/user", withAuth, (req, res) => {
   console.log("======================");
-  console.log(req.session.user)
 
   Toon.findAll({
     where: {
