@@ -40,11 +40,9 @@ a:hover {
 
 main {
   padding: 10%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(81, 162, 166, 1),
-    rgba(81, 162, 166, 0)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(81, 162, 166, 1),
+      rgba(81, 162, 166, 0));
   color: var(--cream);
 }
 
@@ -87,6 +85,7 @@ h3 {
   #loginForm {
     margin: 10px 15%;
   }
+
   main {
     padding: 10% 15%;
   }
@@ -96,6 +95,7 @@ h3 {
   #loginForm {
     margin: 10px 20%;
   }
+
   main {
     padding: 10% 20%;
   }
@@ -105,6 +105,7 @@ h3 {
   #loginForm {
     margin: 10px 25%;
   }
+
   main {
     padding: 5% 25%;
   }

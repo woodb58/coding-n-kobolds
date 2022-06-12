@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Toon, User } = require("../../models");
+
 const withAuth = require("../../utils/auth");
 
 router.get("/", (req, res) => {
@@ -89,7 +90,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 router.delete('/:id', withAuth, (req, res) => {
-  console.log('id', req.params.id);
+  console.log(req.params.id)
   Toon.destroy({
     where: {
       id: req.params.id

@@ -1,0 +1,60 @@
+<nav class="bg-alt text-alt d-flex justify-content-around">
+    <h1>{{User.username}}</h1>
+    <button id="backBtn" onclick="document.location.replace('/user')">Back</button>
+</nav>
+
+<main>
+    <form data-id="{{toon.id}}" class="edit-toon-form">
+        <h2 class="sm-space">Edit Character</h2>
+        <div class="form-floating sm-space">
+            <input type="text" name="toonName" placeholder="Shia LaBeouf" class="form-control"
+                value="{{toon.toonName}}" />
+            <label for="toonName" class="form-label">Name:</label>
+        </div>
+
+        <label for="race" class="form-label visually-hidden">Race:</label>
+        <select name="race" id="charRace" class="form-control dropdown sm-space" value="{{toon.race}}">
+            <option value="human">Human</option>
+            <option value="elf">Elf</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="orc">Orc</option>
+        </select>
+
+        <label for="gender" class="form-label visually-hidden">Gender:</label>
+
+        <select name="gender" id="charGender" class="form-control dropdown sm-space" value="{{toon.gender}}">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="toonClass" class="form-label visually-hidden">Class:</label>
+        <select name="toonClass" id="charClass" class="form-control dropdown sm-space" value="{{toon.toonClass}}">
+            <option value="artificer">Artificer</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="thief">Thief</option>
+            <option value="wizard">Wizard</option>
+        </select>
+
+
+        <label for="backstory" class="form-label visually-hidden">Backstory:</label>
+        <textarea class="form-control sm-space" name="backstory" id="charBackstory" cols="30" rows="10"
+            placeholder="Write a short backstory!">{{toon.backstory}}</textarea>
+
+
+        <button type="submit" class="sm-space">Save Changes</button>
+        <button data-id="{{toon.id}}" type="button" class="sm-space delete-toon-btn">Delete Toon</button>
+    </form>
+
+</main>
+
+
+<script src="/js/editToon.js"></script>
+<script src="/js/deleteToon.js"></script>
