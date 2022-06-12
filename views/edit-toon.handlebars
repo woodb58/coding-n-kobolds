@@ -4,8 +4,7 @@
 </nav>
 
 <main>
-
-    <form class="edit-toon-form">
+    <form data-id="{{toon.id}}" class="edit-toon-form">
         <h2 class="sm-space">Edit Character</h2>
         <div class="form-floating sm-space">
             <input type="text" name="toonName" placeholder="Shia LaBeouf" class="form-control"
@@ -30,9 +29,18 @@
 
         <label for="toonClass" class="form-label visually-hidden">Class:</label>
         <select name="toonClass" id="charClass" class="form-control dropdown sm-space" value="{{toon.toonClass}}">
+            <option value="artificer">Artificer</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
             <option value="fighter">Fighter</option>
-            <option value="mage">Mage</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="sorcerer">Sorcerer</option>
             <option value="thief">Thief</option>
+            <option value="wizard">Wizard</option>
         </select>
 
 
@@ -42,7 +50,7 @@
 
 
         <button type="submit" class="sm-space">Edit Toon</button>
-        <button type="button" class="sm-space delete-toon-btn">Delete Toon</button>
+        <button data-id="{{toon.id}}" type="button" class="sm-space delete-toon-btn">Delete Toon</button>
     </form>
 
 </main>

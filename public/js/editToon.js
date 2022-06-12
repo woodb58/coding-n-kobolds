@@ -9,7 +9,7 @@ async function editFormHandler(event) {
     const backstory = document.querySelector('textarea[name="backstory"]').value;
 
 
-    const response = await fetch(`/api/toon`, {
+    const response = await fetch(`/api/toon/${event.target.dataset.id}`, {
         method: 'PUT',
         body: JSON.stringify({
             toonName,

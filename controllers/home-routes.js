@@ -54,10 +54,10 @@ router.get("/create-toon", (req, res) => {
   res.render("create-toon");
 });
 
-router.get("/edit-toon", (req, res) => {
+router.get("/edit-toon/:id", (req, res) => {
   Toon.findOne({
     where: {
-      id: req.session.user_id,
+      id: req.params.id,
     }
   }).then((dbToonData) => {
     res.render("edit-toon", { toon: dbToonData.get({ plain: true }) });

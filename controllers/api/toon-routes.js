@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/', withAuth, (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Toon.update({
     toonName: req.body.toonName,
     race: req.body.race,
@@ -72,7 +72,7 @@ router.put('/', withAuth, (req, res) => {
   },
     {
       where: {
-        id: req.session.user_id
+        id: req.params.id
       }
     }
   )
@@ -89,10 +89,11 @@ router.put('/', withAuth, (req, res) => {
     });
 });
 
-router.delete('/', withAuth, (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
+  console.log(req.params.id)
   Toon.destroy({
     where: {
-      id: req.session.user_id
+      id: req.params.id
     }
   })
     .then(dbToonData => {
