@@ -54,6 +54,18 @@ router.get("/create-toon", (req, res) => {
   res.render("create-toon");
 });
 
+router.get("/edit-toon", (req, res) => {
+  Toon.findOne({
+    where: {
+      id: req.session.user_id,
+    }
+  }).then((dbToonData) => {
+    console.log(dbToonData)
+    res.render("edit-toon", { toon: dbToonData.get({ plain: true }) });
+  })
+
+});
+
 router.get("/signup", (req, res) => {
   res.render("signup");
 });

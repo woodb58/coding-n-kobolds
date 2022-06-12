@@ -9,16 +9,16 @@
 <main>
 
   {{#each toon}}
-  {{!-- <h1>{{user.username}}</h1> --}}
 
   <div class="toonCard">
-    <img src="/assets/images/{{race}}-{{gender}}-sketch.png" alt="{{race}} {{gender}}">
+    <img class="toonPhoto" src="/assets/images/{{race}}-{{gender}}-sketch.png" alt="{{race}} {{gender}}">
 
     <h3>{{toonName}}</h3>
     <p>{{gender}}</p>
     <p>{{race}}</p>
-    <p><img src="/assets/images/{{toonClass}}.png" alt="">{{toonClass}}</p>
+    <p><img class="toonPhoto" src="/assets/images/{{toonClass}}.png" alt="">{{toonClass}}</p>
     <p>{{backstory}}</p>
+    <button id="editToon" onclick="document.location.replace('/edit-toon')">edit</button>
   </div>
   {{/each}}
 </main>

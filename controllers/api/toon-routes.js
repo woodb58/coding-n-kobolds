@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/', withAuth, (req, res) => {
   Toon.update({
     toonName: req.body.toonName,
     race: req.body.race,
@@ -71,7 +71,7 @@ router.put('/:id', withAuth, (req, res) => {
   },
     {
       where: {
-        id: req.params.id
+        id: req.session.user_id
       }
     }
   )
