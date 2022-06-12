@@ -68,11 +68,6 @@ main {
   color: var(--teal);
 }
 
-.toonPhoto {
-  width: 280px;
-  height: 280px;
-}
-
 @media all and (min-width: 500px) {
   #loginForm {
     margin: 20px 10%;
