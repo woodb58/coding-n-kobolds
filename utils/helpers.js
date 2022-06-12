@@ -1,6 +1,6 @@
 
 module.exports = {
     getToonImage: (race, gender) => {
-      return `${race}-${gender}-sketch.png`
+      return `${race}-${gender}.png`
     }
 }
