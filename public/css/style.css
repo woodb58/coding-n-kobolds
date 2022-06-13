@@ -2,12 +2,46 @@
   --red: #9c2916;
   --teal: #51a2a6;
   --brown: #1b100a;
+  --grey: #898585;
+  --dark-grey: #413f3e;
   --yellow: #e9b44c;
   --cream: #f6f0db;
+
+  --ff: Arima Madurai;
 }
 
 #title {
   margin: auto;
+}
+
+.img-sm {
+  height: 15%;
+  width: 15%;
+}
+
+.img-lg {
+  height: 50%;
+  width: 50%;
+}
+
+.nav-btn:hover {
+  background-color: var(--dark-grey);
+  color: var(--teal);
+}
+
+.form-btn {
+  background-color: var(--grey);
+  padding: 5px;
+  border-radius: 10%;
+  box-shadow: -2px 2px 4px rgba(27, 16, 10, .3);
+}
+
+.form-btn:hover {
+  background-color: #413f3e;
+}
+
+main {
+  color: var(--cream)
 }
 
 body {
@@ -18,7 +52,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--brown);
-  font-family: Arima Madurai;
+  font-family: var(--ff);
 }
 
 a {
@@ -30,20 +64,19 @@ a:hover {
   color: var(--teal);
 }
 
-#newToonForm {
-  text-align: center;
-}
-
 .sm-space {
   margin: 10px;
 }
 
 .form {
+  text-align: center;
   background-color: var(--cream);
   background-image: url(../assets/images/parchment.jpg);
-  box-shadow: -3px 3px 4px#584B53;
+  box-shadow: -3px 3px 4px var(--brown);
   margin: 10px 5%;
   padding: 20px;
+  color: var(--brown);
+  border-radius: 4%; 
 }
 
 .bg-main {
