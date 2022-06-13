@@ -1,26 +1,26 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
   <h1>{{this.user.username}}</h1>
-  <button id="addToon" onclick="document.location.replace('/create-toon')">Add
-    Toon</button>
-  <button id="logoutBtn">logout</button>
+  <div>  
+    <button class='nav-btn' id="addToon" onclick="document.location.replace('/create-toon')">Add
+    Character</button>
+    <button class='nav-btn' id="logoutBtn">Logout</button>
+  </div>
 </nav>
 
 <main>
 
   {{#each toon}}
-
-    <div class="toonCard">
-      <img
+    <div class="form">
+      <img class="img-lg"
         src="/assets/images/{{race}}-{{gender}}.png"
-        alt="{{race}} {{gender}} width="450" height="390""
+        alt="{{race}} {{gender}}"
       />
-
-    <h3>{{toonName}}</h3>
-    <p>{{gender}}</p>
-    <p>{{race}}</p>
-    <p><img src="/assets/images/{{toonClass}}.png" alt="">{{toonClass}}</p>
+    <h4 class="sm-space">{{toonName}}</h4>
+    <p>{{race}} {{toonClass}}</p>
+    <hr>
     <p>{{backstory}}</p>
-    <a href="/edit-toon/{{id}}">edit</a>
+    <hr>
+    <a class="form-btn" href="/edit-toon/{{id}}">edit</a>
   </div>
   {{/each}}
 </main>
