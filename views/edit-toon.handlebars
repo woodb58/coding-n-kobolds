@@ -1,6 +1,6 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
     <h1>{{this.user.username}}</h1>
-    <button id="backBtn" onclick="document.location.replace('/user')">Back</button>
+    <button class="nav-btn" id="backBtn" onclick="document.location.replace('/user')">Back</button>
 </nav>
 
 <main>
@@ -48,8 +48,8 @@
             placeholder="Write a short backstory!">{{toon.backstory}}</textarea>
 
 
-        <button type="submit" class="sm-space">Save Changes</button>
-        <button data-id="{{toon.id}}" type="button" class="sm-space delete-toon-btn">Delete Toon</button>
+        <button type="submit" class="sm-space form-btn">Save Changes</button>
+        <button data-id="{{toon.id}}" type="button" class="sm-space form-btn">Delete Toon</button>
     </form>
 
 </main>
