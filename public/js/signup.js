@@ -18,7 +18,7 @@
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert('Adventurer that name is taken. Choose a unique name!');
       }
     }
   }

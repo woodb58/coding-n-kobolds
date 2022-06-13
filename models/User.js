@@ -22,6 +22,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -29,7 +30,7 @@ User.init(
       validate: {
         len: [4],
       },
-    }
+    },
   }, 
   {
     hooks: {
