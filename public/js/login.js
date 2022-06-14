@@ -20,7 +20,7 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/user');
     } else {
-      alert(response.statusText);
+      alert('Adventurer your credentials are suspicious. Try again');
     }
   }
 }
