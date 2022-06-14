@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
       res.json(newUser);
     });
   } catch (err) {
-    res.status(400).json({ message: 'Adventurer that name is taken. Choose a unique name!' });
+    res.status(500).json(err);
   }
 });
 
