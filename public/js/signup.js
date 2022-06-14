@@ -19,8 +19,8 @@
         document.location.replace('/');
       } else {
         alert('Adventurer that name is taken. Choose a unique name!');
-      }
+      };
     }
-  }
+  };
 
   document.querySelector('#signupForm').addEventListener('submit', signupFormHandler);

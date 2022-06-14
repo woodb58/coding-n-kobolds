@@ -24,6 +24,13 @@
   width: 50%;
 }
 
+.badge img {
+  width: 12%;
+  height: 17%;
+  border-radius: 25%;
+  justify-content: center;
+}
+
 .nav-btn:hover {
   background-color: var(--dark-grey);
   color: var(--teal);
@@ -33,7 +40,7 @@
   background-color: var(--grey);
   padding: 5px;
   border-radius: 10%;
-  box-shadow: -2px 2px 4px rgba(27, 16, 10, .3);
+  box-shadow: -2px 2px 4px rgba(27, 16, 10, 0.3);
 }
 
 .form-btn:hover {
@@ -41,7 +48,7 @@
 }
 
 main {
-  color: var(--cream)
+  color: var(--cream);
 }
 
 body {
@@ -76,7 +83,7 @@ a:hover {
   margin: 10px 5%;
   padding: 20px;
   color: var(--brown);
-  border-radius: 4%; 
+  border-radius: 4%;
 }
 
 .bg-main {
@@ -91,14 +98,19 @@ a:hover {
   color: var(--teal);
 }
 
-
-@media all and (min-width: 500px) {
+@media screen and (max-width: 490px) {
   #loginForm {
     margin: 20px 10%;
   }
 }
 
-@media all and (min-width: 560px) {
+@media screen and (min-width: 500px) {
+  #loginForm {
+    margin: 20px 10%;
+  }
+}
+
+@media screen and (min-width: 560px) {
   #loginForm {
     margin: 10px 15%;
   }
@@ -108,7 +120,7 @@ a:hover {
   }
 }
 
-@media all and (min-width: 750px) {
+@media screen and (min-width: 750px) {
   #loginForm {
     margin: 10px 20%;
   }
@@ -118,7 +130,7 @@ a:hover {
   }
 }
 
-@media all and (min-width: 850px) {
+@media screen and (min-width: 850px) {
   #loginForm {
     margin: 10px 25%;
   }

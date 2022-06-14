@@ -1,9 +1,12 @@
 <nav class="bg-alt text-alt d-flex justify-content-around">
   <h1>{{this.user.username}}</h1>
-  <div>  
-    <button class='nav-btn' id="addToon" onclick="document.location.replace('/create-toon')">Add
-    Character</button>
-    <button class='nav-btn' id="logoutBtn">Logout</button>
+  <div>
+    <button
+      class="nav-btn"
+      id="addToon"
+      onclick="document.location.replace('/create-toon')"
+    >Add Character</button>
+    <button class="nav-btn" id="logoutBtn">Logout</button>
   </div>
 </nav>
 
@@ -11,21 +14,22 @@
 
   {{#each toon}}
     <div class="form">
-      <img class="img-lg"
+      <img
+        class="img-lg"
         src="/assets/images/{{race}}-{{gender}}.png"
         alt="{{race}} {{gender}}"
       />
-    <h4 class="sm-space">{{toonName}}</h4>
-    <p>{{race}} {{toonClass}}</p>
-    <hr>
-    <p>{{backstory}}</p>
-    <hr>
-    <a class="form-btn" href="/edit-toon/{{id}}">edit</a>
-  </div>
+
+      <p class="badge"><img src="/assets/images/{{toonClass}}.png" alt="" /></p>
+
+      <h4 class="sm-space">{{toonName}}</h4>
+      <p>{{race}} {{toonClass}}</p>
+      <hr />
+      <p>{{backstory}}</p>
+      <hr />
+      <a class="form-btn" href="/edit-toon/{{id}}">edit</a>
+    </div>
   {{/each}}
 </main>
-
-
-
 
 <script src="/js/logout.js"></script>
